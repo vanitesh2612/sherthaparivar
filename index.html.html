@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Family Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .family-member {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        #add-member-button {
+            background-color: #2196F3;
+        }
+        #add-member-button:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Village Family Details Form</h1>
+    <form id="familyForm"action="https://script.google.com/macros/s/AKfycbydi8dS49QDOElygAY6v04kh86dYxoAJSI4RhBHPEmfpD_2SEOLME3JbdTDN1XJJ_Pz/exec" method="POST">
+        <label for="family-name">પરિવાર નું નામ:</label>
+        <select id="family-name" name="family_name" required>
+		    <option value="select">select</option>
+            <option value="રૂપસંગભા પરિવાર">રૂપસંગભા પરિવાર</option>
+            <option value="ભગતભા પરિવાર">ભગતભા પરિવાર</option>
+            <option value="સવજીભા પરિવાર">સવજીભા પરિવાર</option>
+            <option value="ચોપડા પરિવાર">ચોપડા પરિવાર</option>
+            <option value="વજાત્રા પરિવાર">વજાત્રા પરિવાર</option>
+			<option value="Other">Other</option>
+        </select>
+
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full_name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="address">Full Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="pin-code">Pin Code:</label>
+        <input type="text" id="pin-code" name="pin_code" required>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" required>
+
+        <label for="blood-group">Blood Group:</label>
+        <select id="blood-group" name="blood_group" required>
+		    <option value="select">select</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select>
+
+        <label for="married-status">Married Status:</label>
+        <select id="married-status" name="married_status" required>
+		    <option value="select">select</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+        </select>
+
+        <h2>Family Members Details:</h2>
+        <div id="family-members-container">
+            <!-- Family Member 1 -->
+            <div class="family-member" id="member-1">
+                <h3>Member 1</h3>
+                <label for="relation-1">પરિવાર સાથેનો સંબંધ:</label>
+                <select id="relation-1" name="relation_1" required>
+				    <option value="select">select</option>
+                    <option value="પત્ની">પત્ની</option>
+                    <option value="ભાઈ">ભાઈ</option>
+                    <option value="ભાભી">ભાભી</option>
+                    <option value="બહેન">બહેન</option>
+                    <option value="પાપા">પાપા</option>
+                    <option value="મમ્મી">મમ્મી</option>
+                    <option value="દાદા">દાદા</option>
+                    <option value="દાદી">દાદી</option>
+                    <option value="ફોઇ">ફોઇ</option>
+                    <option value="દીકરો">દીકરો</option>
+                    <option value="દીકરી">દીકરી</option>
+                </select>
+
+                <label for="member-name-1">Full Name:</label>
+                <input type="text" id="member-name-1" name="member_name_1" required>
+
+                <label for="member-dob-1">Date of Birth:</label>
+                <input type="date" id="member-dob-1" name="member_dob_1" required>
+
+                <label for="member-mobile-1">Mobile Number:</label>
+                <input type="text" id="member-mobile-1" name="member_mobile_1" required>
+
+                <label for="member-blood-group-1">Blood Group:</label>
+                <select id="member-blood-group-1" name="member_blood_group_1" required>
+				    <option value="select">select</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="member-married-status-1">Married Status:</label>
+                <select id="member-married-status-1" name="member_married_status_1" required>
+				    <option value="select">select</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                </select>
+
+                <label for="member-address-1">Full Address:</label>
+                <input type="text" id="member-address-1" name="member_address_1" required>
+
+                <label for="member-pin-code-1">Pin Code:</label>
+                <input type="text" id="member-pin-code-1" name="member_pin_code_1" required>
+            </div>
+        </div>
+
+        <!-- Add more members button -->
+        <button type="button" id="add-member-button">Add More Members</button>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    let memberCount = 1;
+
+    document.getElementById('add-member-button').addEventListener('click', function () {
+        memberCount++;
+        const container = document.getElementById('family-members-container');
+        const newMember = document.createElement('div');
+        newMember.classList.add('family-member');
+        newMember.innerHTML = `
+            <h3>Member ${memberCount}</h3>
+            <label for="relation-${memberCount}">પરિવાર સાથેનો સંબંધ:</label>
+            <select id="relation-${memberCount}" name="relation_${memberCount}" required>
+			    <option value="select">select</option>
+                <option value="પત્ની">પત્ની</option>
+                <option value="ભાઈ">ભાઈ</option>
+                <option value="ભાભી">ભાભી</option>
+                <option value="બહેન">બહેન</option>
+                <option value="પાપા">પાપા</option>
+                <option value="મમ્મી">મમ્મી</option>
+                <option value="દાદા">દાદા</option>
+                <option value="દાદી">દાદી</option>
+                <option value="ફોઇ">ફોઇ</option>
+                <option value="દીકરો">દીકરો</option>
+                <option value="દીકરી">દીકરી</option>
+            </select>
+
+            <label for="member-name-${memberCount}">Full Name:</label>
+            <input type="text" id="member-name-${memberCount}" name="member_name_${memberCount}" required>
+
+            <label for="member-dob-${memberCount}">Date of Birth:</label>
+            <input type="date" id="member-dob-${memberCount}" name="member_dob_${memberCount}" required>
+
+            <label for="member-mobile-${memberCount}">Mobile Number:</label>
+            <input type="text" id="member-mobile-${memberCount}" name="member_mobile_${memberCount}" required>
+
+            <label for="member-blood-group-${memberCount}">Blood Group:</label>
+            <select id="member-blood-group-${memberCount}" name="member_blood_group_${memberCount}" required>
+			    <option value="select">select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label for="member-married-status-${memberCount}">Married Status:</label>
+            <select id="member-married-status-${memberCount}" name="member_married_status_${memberCount}" required>
+			    <option value="select">select</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+            </select>
+
+            <label for="member-address-${memberCount}">Full Address:</label>
+            <input type="text" id="member-address-${memberCount}" name="member_address_${memberCount}" required>
+
+            <label for="member-pin-code-${memberCount}">Pin Code:</label>
+            <input type="text" id="member-pin-code-${memberCount}" name="member_pin_code_${memberCount}" required>
+        `;
+        container.appendChild(newMember);
+    });
+
+    
+</script>
+
+</body>
+</html>
